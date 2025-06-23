@@ -1,65 +1,88 @@
-# Qwik City App ⚡️
+# 🌤️ Qwik Weather App  
+A Real-Time Weather Forecasting Experience  
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+Welcome to the **Qwik Weather App** — a cutting-edge weather dashboard built using the ultra-fast **Qwik** framework and styled with **Tailwind CSS**. Designed for speed, accuracy, and simplicity, this app leverages the **WeatherAPI** to provide detailed weather insights for selected cities with real-time search and a responsive UI.
+
+![Qwik Weather App Screenshot](./assets/weather-app.png)
 
 ---
 
-## Project Structure
+##  Key Features  
 
-This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+- **Live City Weather Search** – Instantly fetch current weather conditions for any selected city using real-time dropdown.
+- **Built with Qwik** – Achieve ultra-fast performance using Qwik's resumability and server-side rendering.
+- **Sleek UI** – Built with Tailwind CSS to ensure a polished, professional, and mobile-responsive design.
+- **Forecast** – View a comprehensive forecast including temperature, condition, humidity, and wind speed.
+- **️Weather Icons & Data** – Integrated dynamic weather icons and detailed condition texts from the API.
+- **Input Validation** – Schema-based validation using **Valibot** ensures accurate and safe queries.
 
-Inside your project, you'll see the following directory structure:
+---
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+## Tech Stack
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.dev/qwikcity/routing/overview/) for more info.
+| Technology       | Purpose                                          |
+|------------------|--------------------------------------------------|
+| **Qwik**         | Ultra-fast web framework for reactive interfaces |
+| **Tailwind CSS** | Utility-first CSS framework for clean design     |
+| **WeatherAPI**   | Free real-time weather data provider             |
+| **Valibot**      | Type-safe validation for input forms             |
 
-- `src/components`: Recommended directory for components.
+---
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+## 🌐 API Information: WeatherAPI  
 
-## Add Integrations and deployment
-
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
-
-```shell
-npm run qwik add # or `yarn qwik add`
-```
-
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
-
-```shell
-npm start # or `yarn start`
+- **Base URL:** `https://api.weatherapi.com/v1`  
+- **Endpoints Used:**
+  - `current.json` → Get current weather  
+  - `forecast.json` → 3-day weather forecast  
+- **Example Call:**
+```bash
+GET https://api.weatherapi.com/v1/forecast.json?key=YOUR_KEY&q=London&days=3
 ```
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+[WEATHER API Docs](https://www.weatherapi.com/docs/)
 
-## Preview
+---
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+## Setup Instructions :
 
-```shell
-npm run preview # or `yarn preview`
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/qwik-weather-app.git
+cd qwik-weather-app
 ```
 
-## Production
-
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
-
-```shell
-npm run build # or `yarn build`
+### 2️⃣ Install Dependencies
+```bash
+npm install
 ```
+
+### 3️⃣ Configure Weather API Key  
+- Sign up at [https://www.weatherapi.com/](https://www.weatherapi.com/)  
+- Get your **free API key** from the dashboard  
+
+#### Add `.env` in the root:
+
+```env
+PUBLIC_WEATHER_API_KEY=your_api_key_here
+```
+
+>  **Important:** Never commit your API keys. Ensure `.env` is listed in `.gitignore`.
+
+---
+
+##  Acknowledgements  
+
+- **Qwik** – For blazing-fast, resumable apps  
+- **Tailwind CSS** – For responsive and modern UI  
+- **WeatherAPI** – For reliable and detailed weather data  
+- **Valibot** – For type-safe schema validation  
+- **Qwik Community** – For ongoing help and feedback  
+
+---
+
+## Author
+
+Made by **Abinaya**  
+> Feel free to fork, contribute, or ⭐ the repo!
+> Thank You !
