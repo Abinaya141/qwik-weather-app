@@ -2,12 +2,12 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
 // components
-import { Weather } from "~/components/weather-app";
+import { QwikWeather } from "~/components/qwik-weather";
 
 export default component$(() => {
 	return (
 		<div>
-			<Weather />
+			<QwikWeather />
 		</div>
 	);
 });
