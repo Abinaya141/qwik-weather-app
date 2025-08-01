@@ -38,7 +38,7 @@ export const WeatherSearch = component$(() => {
         weather.value = null;
 
         try {
-            const apiKey = import.meta.env.PUBLIC_WEATHER_API;
+            const apiKey = import.meta.env.PUBLIC_WEATHER_API_KEY;
             const res = await fetch(
                 `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city.value}&days=3&aqi=no&alerts=no`
             );
